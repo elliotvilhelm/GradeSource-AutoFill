@@ -4,7 +4,7 @@
 
   "name": "GradeSource AutoFill",
   "short_name": "GradeSource AutoFill",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fill in GradeSource",
   "icons": {
       "16": "btc16.png",
@@ -19,6 +19,10 @@
         "js": ["jquery-1.11.1.min.js", "typeahead.bundle.js", "background.js"],
         "css": ["styles.css"]
     }
+  ],
+  "permissions": [
+    "tabs",
+    "https://www.gradesource.com/editscores1.asp?id=581819"
   ],
 
   "manifest_version": 2
