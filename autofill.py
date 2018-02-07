@@ -44,7 +44,6 @@ def load_csv(csv_fileName):
         for row in csvReader:
             email.append(row[0])
             scores.append(row[1])
-
     # print(email)
     # print(scores)
     return email, scores
