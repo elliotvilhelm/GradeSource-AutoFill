@@ -2,7 +2,7 @@
 
 ##### Usage
 
-`python3 -u username -p password -f hw4.csv -c 16`
+`python3 autofill.py -u username -p password -f hw4.csv -c 16`
 
 The last argument column number is the column of the assignment in GradeSource, for homework 4 the number is 16. 
 For homework 5 it would be 17.
