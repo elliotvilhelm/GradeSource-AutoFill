@@ -156,7 +156,8 @@ console.log('wtf');
 //     }, 5);
 // };
 $(document).ready(function () {
-    $("#body").val("testing123");
-    document.getElementById('input#student0').value = 'testing123'
+    document.getElementById('input#student0').value = 'testing123';
+    document.getElementById('#student1').value = 'HEY!';
+    document.getElementById('student2').value = 'PLEASE!!!!';
 });
 
