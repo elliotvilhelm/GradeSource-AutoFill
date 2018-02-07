@@ -14,8 +14,10 @@ enter the column number.
 ##### Requirements
 Must have selenium installed to your python3
 
-If starting from scratch:
+If starting from scratch with OSX:
+
 `brew install python3`
+
 `pip3 install selenium`
 
 The chrome driver I have included is for mac OSX. I have not tested this software on windows but it *should* work if you
