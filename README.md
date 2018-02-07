@@ -2,9 +2,10 @@
 
 ##### Usage
 
-`python3 -u username -p password -f hw4.csv -c columnNum`
+`python3 -u username -p password -f hw4.csv -c 16`
 
-The last argument column number is the column of the assignment in gradesource, for homework 4 the number is 16.
+The last argument column number is the column of the assignment in GradeSource, for homework 4 the number is 16. 
+For homework 5 it would be 17.
 Start from the first column and count to the right.
 This parameter is necessary as the table does not have a unique identifier so to make the program generic I need you to 
 enter the column number.
