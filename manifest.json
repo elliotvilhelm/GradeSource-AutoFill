@@ -1,29 +1,16 @@
 {
+  "manifest_version": 2,
 
-"update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "Getting started example",
+  "description": "This extension allows the user to change the background color of the current page.",
+  "version": "1.0",
 
-  "name": "GradeSource AutoFill",
-  "short_name": "GradeSource AutoFill",
-  "version": "0.1.1",
-  "description": "Fill in GradeSource",
-  "icons": {
-      "16": "btc16.png",
-      "48": "btc48.png",
-      "128": "btc128.png" },
-
-  "content_scripts": [
-    {
-        "matches": [
-          "https://www.gradesource.com/editscores1.asp?id=581819"
-        ],
-        "js": ["jquery-1.11.1.min.js", "typeahead.bundle.js", "background.js"],
-        "css": ["styles.css"]
-    }
-  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
   "permissions": [
-    "tabs",
-    "https://www.gradesource.com/editscores1.asp?id=581819"
-  ],
-
-  "manifest_version": 2
+    "activeTab",
+    "storage"
+  ]
 }
