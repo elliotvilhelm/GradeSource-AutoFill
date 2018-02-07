@@ -67,11 +67,9 @@ if __name__ == "__main__":
     # python3 fill.py -u elliot -p password! -f hw4.csv -c columnNumber (ie: 16)
     args = getopts(argv)
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    print(dir_path)
     browser = webdriver.Chrome(dir_path + "/chromedriver")
     email, scores = load_csv(args['-f'])
     load_page(args['-u'], args['-p'], int(args['-c']))
-    print(len(scores))
     for i in range(len(scores)):
         student = browser.find_element_by_id("student" + str(i))
         print("Email:  ", email[i], "   Score: ", scores[i])
