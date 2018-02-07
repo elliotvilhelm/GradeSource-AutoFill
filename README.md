@@ -1,6 +1,6 @@
 # Auto-Fill for GradeSource!
 
-#####Usage
+##### Usage
 
 `python3 -u username -p password -f hw4.csv -c columnNum`
 
@@ -10,7 +10,7 @@ This parameter is necessary as the table does not have a unique identifier so to
 enter the column number.
 
 
-#####Requirements
+##### Requirements
 Must have selenium installed to your python3
 
 If starting from scratch:
@@ -26,5 +26,5 @@ order. The csv should have two columns "email/PID" and "Score". Since email is n
 is the student scores in the second column **in the correct order**.
 
 
-#####Coming soon
+##### Coming soon
 Verification of student PID/Email and student count.
