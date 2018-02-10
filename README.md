@@ -10,6 +10,8 @@ Start from the first column and count to the right.
 This parameter is necessary as the table does not have a unique identifier so to make the program generic I need you to 
 enter the column number.
 
+The .csv is expected to have PIDs in the first column and student scores in the second column.
+
 
 ##### Requirements
 Must have selenium installed to your python3
@@ -23,11 +25,5 @@ If starting from scratch with OSX:
 The chrome driver I have included is for mac OSX. I have not tested this software on windows but it *should* work if you
 replace the chromedriver executable. You can find the drivers [here](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 
-The csv file is expected to be perfect, as of now the script does no verification meaning it does not check to see if the
-name or PID of the student matches on gradescope. It is expecting the .csv to have the right number of students in the right
-order. The csv should have two columns "email/PID" and "Score". Since email is not being verified all thats really needed
-is the student scores in the second column **in the correct order**.
-
-
-##### Coming soon
-Verification of student PID/Email and student count.
+The program will enter scores for all students found on GradeSource and the .csv. If a student is found on GradeScource but not the .csv, 
+the field will be left blank and the students PID will be returned at the end of the program.
