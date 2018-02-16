@@ -2,7 +2,9 @@
 
 ##### Usage
 
-`python3 autofill.py -u username -p password -f hw4.csv -i 589789`
+`python3 autofill.py -u <username> -p <password> -f hw4.csv -i 589789`
+
+*.csv file is expected to be in the directory of the script
 
 The last "-i" parameter is the id of the from the url of the score page
 you want to update, for example given:
@@ -25,7 +27,7 @@ The program will return student PID's who were
 2. Found on GradSource but not found on the .csv
 
 
-##### Requirements
+#### Requirements
 Must have selenium installed to your python3
 
 If starting from scratch with OSX:
