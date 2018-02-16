@@ -18,7 +18,7 @@ For example:
 >A19338822, 3.5
 
 
-####Output
+#### Output
 
 The program will return student PID's who were
 1. Found on the .csv but not found on GradeSource
