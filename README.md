@@ -18,6 +18,13 @@ For example:
 >A19338822, 3.5
 
 
+####Output
+
+The program will return student PID's who were
+1. Found on the .csv but not found on GradeSource
+2. Found on GradSource but not found on the .csv
+
+
 ##### Requirements
 Must have selenium installed to your python3
 
