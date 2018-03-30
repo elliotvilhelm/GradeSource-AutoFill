@@ -39,3 +39,5 @@ If starting from scratch with OSX:
 
 The chrome driver I have included is for mac OSX. I have not tested this software on windows but it *should* work if you
 replace the chromedriver executable. You can find the drivers [here](https://sites.google.com/a/chromium.org/chromedriver/downloads).
+
+Please note the program will not press the "submit" button, you must press it once the fields have been filled.
