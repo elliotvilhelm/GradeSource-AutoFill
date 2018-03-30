@@ -3,7 +3,7 @@
 ##### Usage
 
 `python3 autofill.py -u <username> -p <password> -f hw4.csv -i 589789`
-
+ 
 *.csv file is expected to be in the directory of the script
 
 The last "-i" parameter is the id of the from the url of the score page
@@ -24,7 +24,7 @@ For example:
 
 The program will return student PID's who were
 1. Found on the .csv but not found on GradeSource
-2. Found on GradSource but not found on the .csv
+2. Found on GradeSource but not found on the .csv
 
 
 #### Requirements
@@ -39,6 +39,3 @@ If starting from scratch with OSX:
 
 The chrome driver I have included is for mac OSX. I have not tested this software on windows but it *should* work if you
 replace the chromedriver executable. You can find the drivers [here](https://sites.google.com/a/chromium.org/chromedriver/downloads).
-
-The program will enter scores for all students found on GradeSource and the .csv. If a student is found on GradeScource but not the .csv, 
-the field will be left blank and the students PID will be returned at the end of the program.
