@@ -37,7 +37,12 @@ If starting from scratch with OSX:
 `pip3 install selenium`
 
 
-The chrome driver I have included is for mac OSX. I have not tested this software on windows but it *should* work if you
+#### User Notes
+- The chrome driver I have included is for mac OSX. I have not tested this software on windows but it *should* work if you
 replace the chromedriver executable. You can find the drivers [here](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 
-Please note the program will not press the "submit" button, you must press it once the fields have been filled.
+- Please note the program will not press the "submit" button, you must press it once the fields have been filled.
+
+- The script is case sensitive in finding the PID's to match.  Make sure the student PID casing in the input CSV file matches Gradesource PID casing.
+
+- On MacOS or Linux systems, make sure the Chrome driver has executable permission set.
