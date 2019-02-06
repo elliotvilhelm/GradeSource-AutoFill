@@ -8,6 +8,8 @@ Author: Elliot V Pourmand
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 """
 
+PID_IDX = 1
+SCORE_IDX = 4
 
 def get_CL_args(argv):
     args = {}  # initialize dict
@@ -40,8 +42,8 @@ def load_csv(csv_fileName):
     with open(csv_fileName, newline='', encoding='utf-8-sig') as csvDataFile:
         csvReader = csv.reader(csvDataFile)
         for row in csvReader:
-            PID.append(row[0])
-            scores.append(row[1])
+            PID.append(row[PID_IDX])
+            scores.append(row[SCORE_IDX])
     return PID, scores
 
 
@@ -52,10 +54,6 @@ def fill_scores(pid, scores, page_id):
     rows_count = browser.execute_script("return document.getElementsByTagName('tr').length")
     # Table has 38 extra rows, this is a hard coded value, sorry fam );
     rows_count = rows_count-38
-    # set([1, 2]).symmetric_difference(set([2, 3]))
-    # Found pids
-    # Get pids on page compare to pids on csv
-    # Analogous to the missing list
     # missing: is what is on csv but not on GradeSource Webpage
     # found_pids: was on the GradeSouce but not csv
     found_pids = []
@@ -77,10 +75,12 @@ def fill_scores(pid, scores, page_id):
 
     pids_diff = pid
     pids_diff = list(set(pids_diff).symmetric_difference(found_pids))
+    print("*"*50)
     if len(pids_diff) is 0:
         print("All PID's on .csv found and filled.")
-    print("\n\nPIDs that were on .csv but not found on GradeScope: ", pids_diff)
-    print("\n\nPIDs that were on GradeScope but not found on .csv: ", missing)
+    print("\n\nPIDs that were on .csv but not found on GradeSource: ", pids_diff)
+    print("\n\nPIDs that were on GradeSource but not found on .csv: ", missing)
+    print("*"*50)
     return missing
 
 
@@ -91,13 +91,14 @@ if __name__ == "__main__":
     from sys import argv
     import time
     import selenium.webdriver.chrome.options
-    #from selenium.webdriver.common.by import By
-    #from selenium.webdriver.support.ui import WebDriverWait
-    #from selenium.webdriver.support import expected_conditions as EC
-    #import time
 
     # Get Command line arguments
     args = get_CL_args(argv)
+    if '--pid-column' in args:
+        PID_IDX = int(args['--pid-column'])
+    if '--score-column' in args:
+        SCORE_IDX = int(args['--score-column'])
+    print("Expecting .csv file PID to be in column ", PID_IDX, " and student score in column ", SCORE_IDX)
 
     # Load Sys Path to Current Directory
     dir_path = os.path.dirname(os.path.realpath(__file__))
