@@ -15,18 +15,15 @@ The default value for PID column and student score is 0 and 1 respectively. Mean
 
 > "A1231231", 10
 
-###### Autograder Example
+##### Autograder Example
+
+The following example is for those of you using .csv files from autograder.ucsd.edu
 
 `python3 autofill.py -u elliot -p xxx -f Homework-3.csv -i 602223 --pid-column 1 --score-column 4`
 
 > "email", "pid", "firstName", "lastName", "score", "daysEarly"
 
 > "elliot@ucsd.edu", "A1235523", "Pourmand", "Elliot", 10, 0
-
-If you are not downloading your .csv from autograder you may be saying what the hell? To specify the PID column and
-score column you can use the `--pid-column` and `--score-column` flags.
-
-Example usage with custom .csv:
 
 #### Output
 
