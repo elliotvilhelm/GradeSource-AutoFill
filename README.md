@@ -2,26 +2,31 @@
 
 ##### Usage
 
-`python3 autofill.py -u <username> -p <password> -f hw4.csv -i 589789`
- 
+`python3 autofill.py -u <username> -p <password> -f hw4.csv -i 589789 --pid-column 0 --score-column 1`
+
 The last "-i" parameter is the id of the from the url of the score page
 you want to update, for example given:
-
 "https://www.gradesource.com/editscores1.asp?id=589789"
 The id you would use is "589789"
 
-The .csv is expected to have PIDs in the second column and scores in the fifth column as this is the default download
-format from autograder.ucsd.edu
+The default value for PID column and student score is 0 and 1 respectively. Meaning the expected .csv format is:
 
-Example autograder.ucsd.edu format:
+> "A1235523", 8
+
+> "A1231231", 10
+
+###### Autograder Example
+
+`python3 autofill.py -u elliot -p xxx -f Homework-3.csv -i 602223 --pid-column 1 --score-column 4`
+
 > "email", "pid", "firstName", "lastName", "score", "daysEarly"
+
 > "elliot@ucsd.edu", "A1235523", "Pourmand", "Elliot", 10, 0
 
 If you are not downloading your .csv from autograder you may be saying what the hell? To specify the PID column and
 score column you can use the `--pid-column` and `--score-column` flags.
 
 Example usage with custom .csv:
-`python3 autofill.py -u elliot -p xxx -f Homework-3.csv -i 602223 --pid-column 0 --score-column 1`
 
 #### Output
 

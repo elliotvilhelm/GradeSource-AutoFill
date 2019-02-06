@@ -8,8 +8,8 @@ Author: Elliot V Pourmand
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 """
 
-PID_IDX = 1
-SCORE_IDX = 4
+PID_IDX = 0
+SCORE_IDX = 1
 
 def get_CL_args(argv):
     args = {}  # initialize dict
