@@ -1,6 +1,6 @@
 # Auto-Fill for GradeSource!
 
-##### Usage
+#### Usage
 
 `python3 autofill.py -u <username> -p <password> -f hw4.csv -i 589789 --pid-column 0 --score-column 1`
 
